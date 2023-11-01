@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<style>
+    table, td{
+       border:2px solid black;
+       padding-right:20px;
+       border-collapse:collapse;
+      }
+      .btn btn-primary{
+             height:5px;
+             width:5px;
+      }
+   </style>
+<body>
+    <h1 id="title">Dom Manipulation</h1>
+    <p id="description">I have manipulated a simple Form with DOM</p>
+    <div class="table">
+    <table id="mytable" class="table">
+        <thead>
+            <tr>
+                Form data to table
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td col>First Name</td>
+            <td col>Last Name</td>
+            <td col>Email</td>
+            <td col>address</td>
+            <td col>pincode</td>
+            <td col>gender</td>
+             <td col>food</td>
+            <td col>state</td>
+            <td col>country</td> 
+        </tr>
+    </tbody>
+    </table></div><br/><br/>
+  
+    <form id="form" onsubmit="return addToTable();">
+        <div class="form-group">
+        <label>firstName</label>
+        <input id="first-name" type="text" name="firstname" placeholder="Abcd" required><br/><br/>
+        <label>lastName</label>
+        <input id="last-name" type="text" name="lastname" placeholder="Efgh" required ><br/><br/>
+        <label>email</label>
+        <input type="text" name="email" id="Email" placeholder="form@gmail.com" ><br/><br/> 
+        Address:<textarea id="address" placeholder="text"></textarea>
+        <br/><br/>
+        <label>pincode</label>
+        <input type="text-field" name="pincode" id="pincode" placeholder=" 666666" required><br/><br/>
+        
+        <label >Male</label>
+        <input class="gendercheck" type="radio" name="gender" value="Male" >
+        <label >Female</label>
+        <input class="gendercheck" type="radio" name="gender" value="Female" >
+        <br/><br/>
+        <label >Food: <br/>
+            Juice<input class=foodcheckbox type="checkbox" id="checkbox1" name="Food" value="Juice">
+            Icecream<input class=foodcheckbox type="checkbox" id="checkbox2" name="Food" value="Icecream">
+            Dessert<input class=foodcheckbox  type="checkbox" id="cheackbox3" name="Food" value="Dessert">
+            Sandwich<input class=foodcheckbox type="checkbox" id="checkbox4" name="Food" value="Sandwich">
+            Burger<input class=foodcheckbox type="checkbox" id="checkbox5" name="Food" value="Burger"></label>
+        <br/>
+        <br/>
+    
+         State:  <select name="state" id="State" >
+           <optgroup label="state">
+            <option value="Select">Select</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Chattisgarh">Chattisgarh</option>
+            <option value="AndhraPradesh">Andhra Pradesh</option>
+            </optgroup>
+            </select>
+           <br/></br/>
+         Country:<select name="country" id="Country" >
+           <optgroup label="Country">
+            <option value="Select">Select</option>
+            <option value="India">India</option>
+            <option value="UK">UK</option>
+            <option value="US">US</option>
+            <option value="South Africa">SouthAfrica</option>
+            <option value="Australia">Australia</option>
+            </optgroup>
+            </select><br/><br/>
+        <button id="submit" class="btn btn-primary" type="submit">Submit</button><br/>
+        <input id="remove" type="button" value="Delete">
+    </div>
+    </form>
+
+     
+        <script src="form.js">
+      
+      
+        </script>
+   <!-- <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script> -->
+   </body>
+</html>
